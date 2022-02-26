@@ -17,9 +17,9 @@ open class CreateAdvertisement(
     @Transactional
     override fun command(command: CreateAdvertisementUsecase.Command) {
         val advertisement = command.advertisement
-        logger.info("광고를 데이터베이스에 저장하기 위해 광고 어댑터를 호출")
+        logger.info("광고를 데이터베이스에 저장하기 위해 광고 포트를 호출")
         advertisementPort.save(advertisement)
-        logger.info("광고 심사를 위해 심사 어댑터 호출")
+        logger.info("광고 심사를 위해 심사 포트 호출")
         advertisementInspectionPort.requestInspection(advertisement)
     }
 }
