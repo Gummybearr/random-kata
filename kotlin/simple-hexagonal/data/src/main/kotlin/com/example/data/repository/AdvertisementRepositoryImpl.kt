@@ -13,6 +13,6 @@ class AdvertisementRepositoryImpl : AdvertisementRepository {
     }
 
     override fun save(advertisement: Advertisement) {
-        database.put(advertisement.id, advertisement)
+        database[advertisement.id] = advertisement
     }
 }

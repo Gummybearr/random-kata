@@ -1,8 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    id("idea")
     id("org.springframework.boot") version "2.6.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
+
     kotlin("jvm") version "1.6.10"
     kotlin("plugin.spring") version "1.6.10"
 }
@@ -17,8 +19,11 @@ allprojects {
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
-            freeCompilerArgs = listOf("-Xjsr305=strict")
             jvmTarget = "11"
+            languageVersion = "1.5"
+            apiVersion = "1.5"
+//            freeCompilerArgs = listOf("-Xjsr305=strict")
+//            jvmTarget = "11"
         }
     }
 
@@ -29,6 +34,7 @@ allprojects {
 
 subprojects {
     apply {
+        plugin("idea")
         plugin("kotlin")
         plugin("kotlin-spring")
         plugin("org.springframework.boot")
