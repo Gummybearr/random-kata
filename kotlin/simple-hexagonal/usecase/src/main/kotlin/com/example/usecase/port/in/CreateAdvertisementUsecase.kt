@@ -2,7 +2,7 @@ package com.example.usecase.port.`in`
 
 import com.example.core.Advertisement
 
-interface CreateNewAdvertisementUsecase {
+interface CreateAdvertisementUsecase {
     fun command(command: Command)
 
     data class Command(

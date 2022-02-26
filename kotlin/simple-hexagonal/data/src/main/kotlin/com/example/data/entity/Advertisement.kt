@@ -1,9 +1,6 @@
 package com.example.data.entity
 
-import com.example.core.AdvertisementId
-import com.example.core.Description
-import com.example.core.Image
-import com.example.core.Title
+import com.example.core.*
 
 // Entity
 class Advertisement(
@@ -11,5 +8,6 @@ class Advertisement(
     val id: AdvertisementId,
     val title: Title,
     val image: Image,
-    val description: Description
+    val description: Description,
+    val status: AdvertisementStatus
 )

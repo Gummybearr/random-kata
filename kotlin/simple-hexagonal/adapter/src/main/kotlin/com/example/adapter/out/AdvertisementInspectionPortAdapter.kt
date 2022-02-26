@@ -1,4 +1,4 @@
-package com.example.adapter.adapter.out
+package com.example.adapter.out
 
 import com.example.core.Advertisement
 import com.example.usecase.port.out.AdvertisementInspectionPort
