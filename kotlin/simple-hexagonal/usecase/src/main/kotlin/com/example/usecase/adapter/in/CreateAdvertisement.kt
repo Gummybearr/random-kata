@@ -3,6 +3,8 @@ package com.example.usecase.adapter.`in`
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementInspectionPort
 import com.example.usecase.port.out.AdvertisementPort
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import javax.transaction.Transactional
 
 open class CreateAdvertisement(
@@ -10,10 +12,14 @@ open class CreateAdvertisement(
     private val advertisementPort: AdvertisementPort
 ) : CreateAdvertisementUsecase {
 
+    private val logger: Logger = LoggerFactory.getLogger(this::class.java)
+
     @Transactional
     override fun command(command: CreateAdvertisementUsecase.Command) {
         val advertisement = command.advertisement
+        logger.info("광고를 데이터베이스에 저장하기 위해 광고 어댑터를 호출")
         advertisementPort.save(advertisement)
+        logger.info("광고 심사를 위해 심사 어댑터 호출")
         advertisementInspectionPort.requestInspection(advertisement)
     }
 }

@@ -9,9 +9,8 @@ data class Advertisement(
 ) {
     companion object {
         fun new(title: Title, image: Image, description: Description): Advertisement {
-            val id = DistributedId.nextId()
             return Advertisement(
-                id = AdvertisementId(id),
+                id = AdvertisementId.new(),
                 title = title,
                 image = image,
                 description = description,

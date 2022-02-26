@@ -5,13 +5,16 @@ import com.example.core.exception.CustomException
 data class Image(val url: String) {
 
     companion object {
-        private const val VALID_URL = "some random url in "
+        private const val VALID_URL = "address in s3 bucket"
+    }
 
-        operator fun invoke(title: String): Image {
-            if (title != VALID_URL) {
-                throw CustomException("사진이 이상해요")
-            }
-            return Image(title)
+    init {
+        validate(url)
+    }
+
+    private fun validate(url: String) {
+        if (url != VALID_URL) {
+            throw CustomException("사진이 이상해요")
         }
     }
 }
