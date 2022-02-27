@@ -1,9 +1,9 @@
 package com.example.webapp.api.mapper
 
-import com.example.core.Advertisement
-import com.example.core.Description
-import com.example.core.Image
-import com.example.core.Title
+import com.example.core.advertisement.Advertisement
+import com.example.core.advertisement.Description
+import com.example.core.advertisement.Image
+import com.example.core.advertisement.Title
 
 data class CreateAdvertisementRequest(
     val title: String,

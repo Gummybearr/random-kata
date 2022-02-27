@@ -1,6 +1,6 @@
 package com.example.data.repository
 
-import com.example.core.AdvertisementId
+import com.example.core.advertisement.AdvertisementId
 import com.example.data.entity.Advertisement
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

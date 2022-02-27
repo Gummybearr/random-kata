@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.advertisement
 
 data class Advertisement(
     val id: AdvertisementId,

@@ -1,7 +1,7 @@
 package com.example.adapter.out.mapper
 
 import com.example.data.entity.Advertisement
-import com.example.core.Advertisement as CoreAdvertisement
+import com.example.core.advertisement.Advertisement as CoreAdvertisement
 
 class AdvertisementMapper {
     fun toPersistence(advertisement: CoreAdvertisement): Advertisement {

@@ -1,10 +1,9 @@
 package com.example.usecase.adapter.`in`
 
+import com.example.core.logger
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementInspectionPort
 import com.example.usecase.port.out.AdvertisementPort
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import javax.transaction.Transactional
 
 open class CreateAdvertisement(
@@ -12,7 +11,7 @@ open class CreateAdvertisement(
     private val advertisementPort: AdvertisementPort
 ) : CreateAdvertisementUsecase {
 
-    private val logger: Logger = LoggerFactory.getLogger(this::class.java)
+    private val logger = logger()
 
     @Transactional
     override fun command(command: CreateAdvertisementUsecase.Command) {

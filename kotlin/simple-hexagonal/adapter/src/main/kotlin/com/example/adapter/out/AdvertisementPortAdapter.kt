@@ -1,8 +1,8 @@
 package com.example.adapter.out
 
 import com.example.adapter.out.mapper.AdvertisementMapper
-import com.example.core.Advertisement as CoreAdvertisement
-import com.example.core.AdvertisementId
+import com.example.core.advertisement.Advertisement as CoreAdvertisement
+import com.example.core.advertisement.AdvertisementId
 import com.example.data.repository.AdvertisementRepository
 import com.example.usecase.port.out.AdvertisementPort
 

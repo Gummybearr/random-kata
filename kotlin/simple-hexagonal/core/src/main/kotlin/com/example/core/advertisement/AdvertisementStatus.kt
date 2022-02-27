@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.advertisement
 
 enum class AdvertisementStatus(val description: String) {
     PENDING("심사 대기중"),

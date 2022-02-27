@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.core.advertisement
 
 import com.example.core.exception.CustomException
 

@@ -1,6 +1,6 @@
 package com.example.usecase.port.`in`
 
-import com.example.core.Advertisement
+import com.example.core.advertisement.Advertisement
 
 interface CreateAdvertisementUsecase {
     fun command(command: Command)

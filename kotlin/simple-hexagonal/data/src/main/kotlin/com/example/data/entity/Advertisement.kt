@@ -1,6 +1,6 @@
 package com.example.data.entity
 
-import com.example.core.*
+import com.example.core.advertisement.*
 
 // Entity
 class Advertisement(
