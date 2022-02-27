@@ -3,8 +3,10 @@ package com.example.webapp.api
 import com.example.core.advertisement.AdvertisementId
 import com.example.core.logger
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
+import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.`in`.QueryAdvertisementUsecase
 import com.example.webapp.api.mapper.CreateAdvertisementRequest
+import com.example.webapp.api.mapper.PatchAdvertisementRequest
 import com.example.webapp.api.mapper.QueryAdvertisementResponse
 import org.springframework.web.bind.annotation.*
 
@@ -12,14 +14,15 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api/v1/advertisements")
 class AdvertisementController(
     val createAdvertisementUsecase: CreateAdvertisementUsecase,
-    val queryAdvertisementUsecase: QueryAdvertisementUsecase
+    val queryAdvertisementUsecase: QueryAdvertisementUsecase,
+    val modifyAdvertisementUsecase: ModifyAdvertisementUsecase
 ) {
 
     private val logger = logger()
 
     @PostMapping
     fun createAdvertisement(@RequestBody request: CreateAdvertisementRequest) {
-        val command = CreateAdvertisementUsecase.Command(request.toAdvertisement())
+        val command = request.toCreateUsecaseCommand()
         logger.info("웹 요청을 전달받아 광고 생성 유즈케이스를 호출")
         createAdvertisementUsecase.command(command)
     }
@@ -31,5 +34,12 @@ class AdvertisementController(
         logger.info("웹 요청을 전달받아 광고 조회 유즈케이스를 호출")
         val advertisement = queryAdvertisementUsecase.query(query) ?: return null
         return QueryAdvertisementResponse.from(advertisement)
+    }
+
+    @PatchMapping
+    fun modifyAdvertisement(@RequestBody request: PatchAdvertisementRequest) {
+        val command = request.toModifyUsecaseCommand()
+        logger.info("웹 요청을 전달받아 광고 수정 유즈케이스를 호출")
+        modifyAdvertisementUsecase.command(command)
     }
 }

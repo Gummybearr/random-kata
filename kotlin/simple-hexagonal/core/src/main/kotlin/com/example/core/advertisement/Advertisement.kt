@@ -1,6 +1,6 @@
 package com.example.core.advertisement
 
-data class Advertisement(
+class Advertisement(
     val id: AdvertisementId,
     val title: Title,
     val image: Image,
@@ -17,5 +17,19 @@ data class Advertisement(
                 status = AdvertisementStatus.PENDING
             )
         }
+    }
+
+    fun update(newTitle: Title?, newImage: Image?, newDescription: Description?): Advertisement {
+        val title = newTitle?:title
+        val image = newImage?:image
+        val description = newDescription?:description
+        val status = status.updateOnModifyRequest()
+        return Advertisement(
+            id = id,
+            title = title,
+            image = image,
+            description = description,
+            status = status
+        )
     }
 }

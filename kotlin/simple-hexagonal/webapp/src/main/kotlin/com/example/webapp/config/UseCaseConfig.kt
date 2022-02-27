@@ -1,8 +1,10 @@
 package com.example.webapp.config
 
 import com.example.usecase.adapter.`in`.CreateAdvertisement
+import com.example.usecase.adapter.`in`.ModifyAdvertisement
 import com.example.usecase.adapter.`in`.QueryAdvertisement
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
+import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.`in`.QueryAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementInspectionPort
 import com.example.usecase.port.out.AdvertisementPersistencePort
@@ -24,5 +26,13 @@ class UseCaseConfig {
         advertisementPersistencePort: AdvertisementPersistencePort
     ): QueryAdvertisementUsecase {
         return QueryAdvertisement(advertisementPersistencePort)
+    }
+
+    @Bean
+    fun modifyAdvertisement(
+        advertisementInspectionPort: AdvertisementInspectionPort,
+        advertisementPersistencePort: AdvertisementPersistencePort
+    ): ModifyAdvertisementUsecase {
+        return ModifyAdvertisement(advertisementInspectionPort, advertisementPersistencePort)
     }
 }
