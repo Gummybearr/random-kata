@@ -11,10 +11,9 @@ data class Description(val description: String) {
         validate(description)
     }
 
-    private fun validate(description: String): Description {
+    private fun validate(description: String) {
         if (description.length < MINIMUM_LENGTH) {
             throw CustomException("설명이 너무 짧아요~")
         }
-        return Description(description)
     }
 }
