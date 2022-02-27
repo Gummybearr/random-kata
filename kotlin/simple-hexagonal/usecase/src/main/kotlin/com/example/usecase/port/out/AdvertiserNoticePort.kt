@@ -1,5 +1,5 @@
 package com.example.usecase.port.out
 
-interface MessagePort {
+interface AdvertiserNoticePort {
     fun noticeAdvertiser()
 }
