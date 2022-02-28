@@ -7,30 +7,48 @@
 <img src="https://github.com/Gummybearr/random-kata/blob/main/kotlin/simple-hexagonal/architecture.drawio.png?raw=true"/>
 
 ## Project Overview
-```html
-simple-hexagonal
 
-adapter 모듈
---out: 시스템 외부로 나가야 하는 요청들의 구체적인 동작이 구현된 곳. usecase모듈이 아닌 adapter모듈에 구현하여 시스템 외부와 내부를 격리시키고 코드나 데이터의 진입을 매퍼를 통해 제어
-----mapper: 외부응답을 서비스 내에 정의된 값들로 변형하거나, 내부의 값을 외부에서 사용할 수 있는 값들로 변형.
---config: 구현체(adapter)를 인터페이스(port) 타입으로 사용할 수 있도록 객체 조립
-
+외부에 의존하지 않는 모듈
+```
 core 모듈: 소통의 단위가 되는 도메인 객체들을 정의
+```
 
-data 모듈: 이 마이크로서비스가 관리하는 데이터베이스로의 접근점
---entity: 데이터베이스 엔티티 정의
---repository: 레포지토리
-
-eventapp 모듈: 메시지큐에 전달되는 이벤트 중 이 마이크로서비스에 영향을 미치는 이벤트들의 진입점. 이벤트를 컨슘하기 위해 인포트 호출
-
+core에 의존하는 모듈
+```
 usecase 모듈: 시스템과 연관된 요청들이 정의되거나 구현된 곳
 --adapter
 ----in: 내부요청의 구체적인 동작이 정의된 곳.
 --port
 ----in: 요청을 처리하거나 알리기 위해 내부 시스템을 호출해야 하는 요청들이 정의되어있는 곳
 ----out: 요청을 처리하거나 알리기 위해 시스템 외부로 나가야 하는 요청들이 정의되어있는 곳
+```
 
-webapp 모듈: 
+core, usecase에 의존하는 모듈
+```
+adapter 모듈: out port의 구체적인 동작이 정의된 곳
+--out: 시스템 외부로 나가야 하는 요청들의 구체적인 동작이 구현된 곳. usecase모듈이 아닌 adapter모듈에 구현하여 시스템 외부와 내부를 격리시키고 코드나 데이터의 진입을 매퍼를 통해 제어
+----mapper: 외부응답을 서비스 내에 정의된 값들로 변형하거나, 내부의 값을 외부에서 사용할 수 있는 값들로 변형.
+--config: 정의된 포트를 구현체인 어댑터들을 이용하여 조립, mapper를 빈으로 사용할 수 있도록 제공
+```
+
+core, usecase, adapter에 의존하는 모듈
+```
+eventapp 모듈: 메시지큐에 전달되는 이벤트 중 이 마이크로서비스에 영향을 미치는 이벤트들의 진입점. 이벤트를 컨슘하기 위해 in-포트 호출
+--consumer: 메시지 핸들러
+----mapper: 외부요청을 usecase에 정의된 값으로 변형
+--config: 이벤트앱에서 사용하는 usecase, port와 구현체들을 조립
+
+webapp 모듈: 웹요청 중 이 마이스로서비스에 영향을 미치는 요청의 진입점. 웹요청을 처리하기 위해 in-포트 호출
+--api: 메시지 핸들러
+----mapper: 외부요청을 usecase에 정의된 값으로 변형하거나, usecase의 리턴값을 외부에서 사용할 수 있는 값들로 변형
+--config: 웹앱에서 사용하는 usecase, port와 구현체들을 조립
+```
+
+adapter와 인프라에 의존하는 모듈
+```
+data 모듈: 이 마이크로서비스가 관리하는 데이터베이스로의 접근점
+--entity: 데이터베이스 엔티티 정의
+--repository: 레포지토리
 ```
 
 ## Understanding flow with usecase
