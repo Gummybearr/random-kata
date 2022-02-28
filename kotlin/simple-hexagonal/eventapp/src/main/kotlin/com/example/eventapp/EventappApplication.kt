@@ -6,8 +6,7 @@ import org.springframework.boot.runApplication
 @SpringBootApplication(
     scanBasePackages = [
         "com.example.eventapp",
-        "com.example.usecase",
-        "com.example.adapter"
+        "com.example.usecase"
     ]
 )
 class EventappApplication
