@@ -20,9 +20,9 @@ class Advertisement(
     }
 
     fun update(newTitle: Title?, newImage: Image?, newDescription: Description?): Advertisement {
-        val title = newTitle?:title
-        val image = newImage?:image
-        val description = newDescription?:description
+        val title = newTitle ?: title
+        val image = newImage ?: image
+        val description = newDescription ?: description
         val status = status.updateOnModifyRequest()
         return Advertisement(
             id = id,

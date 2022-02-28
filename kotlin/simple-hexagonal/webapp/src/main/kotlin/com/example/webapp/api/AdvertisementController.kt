@@ -3,6 +3,7 @@ package com.example.webapp.api
 import com.example.core.advertisement.AdvertisementId
 import com.example.core.logger
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
+import com.example.usecase.port.`in`.DeleteAdvertisementUsecase
 import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.`in`.QueryAdvertisementUsecase
 import com.example.webapp.api.mapper.CreateAdvertisementRequest
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.*
 class AdvertisementController(
     val createAdvertisementUsecase: CreateAdvertisementUsecase,
     val queryAdvertisementUsecase: QueryAdvertisementUsecase,
-    val modifyAdvertisementUsecase: ModifyAdvertisementUsecase
+    val modifyAdvertisementUsecase: ModifyAdvertisementUsecase,
+    val deleteAdvertisementUsecase: DeleteAdvertisementUsecase
 ) {
 
     private val logger = logger()
@@ -41,5 +43,13 @@ class AdvertisementController(
         val command = request.toModifyUsecaseCommand()
         logger.info("웹 요청을 전달받아 광고 수정 유즈케이스를 호출")
         modifyAdvertisementUsecase.command(command)
+    }
+
+    @DeleteMapping("/{advertisementId}")
+    fun deleteAdvertisement(@PathVariable advertisementId: Long) {
+        val advertisementId = AdvertisementId(advertisementId)
+        val command = DeleteAdvertisementUsecase.Command(advertisementId)
+        logger.info("웹 요청을 전달받아 광고 삭제 유즈케이스를 호출")
+        deleteAdvertisementUsecase.command(command)
     }
 }

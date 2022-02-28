@@ -8,6 +8,6 @@ class AdvertiserNoticePortAdapter : AdvertiserNoticePort {
     private val logger = logger()
 
     override fun noticeAdvertiser() {
-        logger.info("광고의 상태를 공지하기 위해 광고주 알림 이벤트를 전송")
+        logger.info("메시지큐로 광고 알림 이벤트 전송")
     }
 }

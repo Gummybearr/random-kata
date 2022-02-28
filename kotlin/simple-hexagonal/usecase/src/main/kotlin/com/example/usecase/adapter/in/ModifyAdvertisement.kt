@@ -5,11 +5,13 @@ import com.example.usecase.exception.AdvertisementNotFoundException
 import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementInspectionPort
 import com.example.usecase.port.out.AdvertisementPersistencePort
+import com.example.usecase.port.out.AdvertiserNoticePort
 import javax.transaction.Transactional
 
 open class ModifyAdvertisement(
     private val advertisementInspectionPort: AdvertisementInspectionPort,
-    private val advertisementPersistencePort: AdvertisementPersistencePort
+    private val advertisementPersistencePort: AdvertisementPersistencePort,
+    private val advertiserNoticePort: AdvertiserNoticePort
 ) : ModifyAdvertisementUsecase {
 
     private val logger = logger()
@@ -34,5 +36,8 @@ open class ModifyAdvertisement(
 
         logger.info("광고 심사를 위해 심사 포트 호출")
         advertisementInspectionPort.requestInspection(modifiedAdvertisement)
+
+        logger.info("광고주에게 광고 상태를 알리기 위해 알림 포트 호출")
+        advertiserNoticePort.noticeAdvertiser()
     }
 }

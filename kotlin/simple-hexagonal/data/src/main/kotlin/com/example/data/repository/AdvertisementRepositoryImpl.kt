@@ -20,4 +20,9 @@ class AdvertisementRepositoryImpl : AdvertisementRepository {
         database[advertisement.id] = advertisement
         logger.info("데이터베이스에 ${advertisement}를 저장")
     }
+
+    override fun delete(advertisementId: AdvertisementId) {
+        database.remove(advertisementId)
+        logger.info("데이터베이스에서 광고(${advertisementId})를 제거")
+    }
 }
