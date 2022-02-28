@@ -43,6 +43,10 @@ subprojects {
         plugin("kotlin-kapt")
     }
 
+    dependencies {
+        testImplementation(kotlin("test-junit5"))
+    }
+
     tasks.jar {
         enabled = true
     }
