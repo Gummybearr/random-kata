@@ -1,12 +1,12 @@
-package com.example.adapter.config
+package com.example.usecase.config
 
-import com.example.adapter.out.AdvertisementInspectionPortAdapter
-import com.example.adapter.out.AdvertisementPerformancePortAdapter
-import com.example.adapter.out.AdvertisementPersistencePortAdapter
-import com.example.adapter.out.AdvertiserNoticePortAdapter
-import com.example.adapter.out.mapper.AdvertisementMapper
+import com.example.usecase.adapter.out.AdvertisementInspectionPortAdapter
+import com.example.usecase.adapter.out.AdvertisementPerformancePortAdapter
+import com.example.usecase.adapter.out.AdvertisementPersistencePortAdapter
+import com.example.usecase.adapter.out.AdvertiserNoticePortAdapter
 import com.example.data.config.PersistenceConfig
 import com.example.data.repository.AdvertisementRepository
+import com.example.usecase.adapter.out.mapper.AdvertisementMapper
 import com.example.usecase.port.out.AdvertisementInspectionPort
 import com.example.usecase.port.out.AdvertisementPerformancePort
 import com.example.usecase.port.out.AdvertisementPersistencePort
@@ -24,7 +24,10 @@ class AdapterConfig {
     }
 
     @Bean
-    fun advertisementPort(advertisementRepository: AdvertisementRepository, advertisementMapper: AdvertisementMapper): AdvertisementPersistencePort {
+    fun advertisementPort(
+        advertisementRepository: AdvertisementRepository,
+        advertisementMapper: AdvertisementMapper
+    ): AdvertisementPersistencePort {
         return AdvertisementPersistencePortAdapter(advertisementRepository, advertisementMapper)
     }
 

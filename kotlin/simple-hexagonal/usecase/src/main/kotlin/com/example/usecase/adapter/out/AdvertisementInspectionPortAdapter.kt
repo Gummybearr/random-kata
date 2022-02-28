@@ -1,4 +1,4 @@
-package com.example.adapter.out
+package com.example.usecase.adapter.out
 
 import com.example.core.advertisement.Advertisement
 import com.example.core.logger

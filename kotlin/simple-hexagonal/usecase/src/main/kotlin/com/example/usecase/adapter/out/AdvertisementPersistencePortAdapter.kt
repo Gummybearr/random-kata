@@ -1,9 +1,9 @@
-package com.example.adapter.out
+package com.example.usecase.adapter.out
 
-import com.example.adapter.out.mapper.AdvertisementMapper
 import com.example.core.advertisement.AdvertisementId
 import com.example.core.logger
 import com.example.data.repository.AdvertisementRepository
+import com.example.usecase.adapter.out.mapper.AdvertisementMapper
 import com.example.usecase.port.out.AdvertisementPersistencePort
 import com.example.core.advertisement.Advertisement as CoreAdvertisement
 

@@ -1,6 +1,6 @@
-package com.example.adapter.config
+package com.example.usecase.config
 
-import com.example.adapter.out.mapper.AdvertisementMapper
+import com.example.usecase.adapter.out.mapper.AdvertisementMapper
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

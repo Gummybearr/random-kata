@@ -1,4 +1,4 @@
-package com.example.adapter.out.mapper
+package com.example.usecase.adapter.out.mapper
 
 import com.example.core.logger
 import com.example.data.entity.Advertisement
