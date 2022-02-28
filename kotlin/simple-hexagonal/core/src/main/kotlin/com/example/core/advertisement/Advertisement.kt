@@ -32,4 +32,24 @@ class Advertisement(
             status = status
         )
     }
+
+    fun live(): Advertisement {
+        return Advertisement(
+            id = id,
+            title = title,
+            image = image,
+            description = description,
+            status = status.updateOnLiveRequest()
+        )
+    }
+
+    fun block(): Advertisement {
+        return Advertisement(
+            id = id,
+            title = title,
+            image = image,
+            description = description,
+            status = status.updateOnBlockRequest()
+        )
+    }
 }
