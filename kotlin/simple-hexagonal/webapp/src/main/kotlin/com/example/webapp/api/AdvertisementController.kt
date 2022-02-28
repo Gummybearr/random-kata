@@ -34,8 +34,8 @@ class AdvertisementController(
         val advertisementId = AdvertisementId(advertisementId)
         val query = QueryAdvertisementUsecase.Query(advertisementId = advertisementId)
         logger.info("웹 요청을 전달받아 광고 조회 유즈케이스를 호출")
-        val advertisement = queryAdvertisementUsecase.query(query) ?: return null
-        return QueryAdvertisementResponse.from(advertisement)
+        val result = queryAdvertisementUsecase.query(query) ?: return null
+        return QueryAdvertisementResponse.from(result.advertisement, result.performance)
     }
 
     @PatchMapping

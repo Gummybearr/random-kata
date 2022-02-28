@@ -9,6 +9,7 @@ import com.example.usecase.port.`in`.DeleteAdvertisementUsecase
 import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.`in`.QueryAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementInspectionPort
+import com.example.usecase.port.out.AdvertisementPerformancePort
 import com.example.usecase.port.out.AdvertisementPersistencePort
 import com.example.usecase.port.out.AdvertiserNoticePort
 import org.springframework.context.annotation.Bean
@@ -27,9 +28,10 @@ class UseCaseConfig {
 
     @Bean
     fun queryAdvertisement(
-        advertisementPersistencePort: AdvertisementPersistencePort
+        advertisementPersistencePort: AdvertisementPersistencePort,
+        advertisementPerformancePort: AdvertisementPerformancePort
     ): QueryAdvertisementUsecase {
-        return QueryAdvertisement(advertisementPersistencePort)
+        return QueryAdvertisement(advertisementPersistencePort, advertisementPerformancePort)
     }
 
     @Bean
