@@ -58,7 +58,7 @@ core, usecase, 인프라에 의존하는 모듈
 1. 광고 생성 요청이 webapp.api.AdvertisementController를 호출
 2. webapp.api.AdvertisementController가 웹 요청을 전달받아 광고 생성 유즈케이스를 호출
 3. 유즈케이스의 구현체인 adapter.in.CreateAdvertisement가 광고를 데이터베이스에 저장하기 위해 광고 포트를 호출
-4. 광고 포트의 구현체인 data.repository.AdvertisementRepositoryImpl가 데이터베이스에 광고를 저장
+4. 광고 포트의 구현체인 adapter.out.AdvertisementPersistencePortAdapter가 인프라에 광고 저장 요청
 5. adapter.in.CreateAdvertisement가 광고 심사를 위해 심사 포트를 호출
 6. 심사 포트의 구현체인 adapter.out.AdvertisementInspectionPortAdapter가 메시지큐로 광고 심사요청 이벤트를 전송
 
