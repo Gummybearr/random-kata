@@ -11,6 +11,7 @@ object AdvertisementMapper {
         logger.info("어댑터 모듈의 매퍼에서 광고 객체를 데이터베이스 엔티티로 변경")
         return Advertisement(
             id = advertisement.id,
+            advertiserId = advertisement.advertiserId,
             title = advertisement.title,
             image = advertisement.image,
             description = advertisement.description,
@@ -22,6 +23,7 @@ object AdvertisementMapper {
         logger.info("어댑터 모듈의 매퍼에서 데이터베이스 엔티티를 광고 객체로 변경")
         return CoreAdvertisement(
             id = advertisement.id,
+            advertiserId = advertisement.advertiserId,
             title = advertisement.title,
             image = advertisement.image,
             description = advertisement.description,
