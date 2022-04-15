@@ -1,4 +1,4 @@
-package com.example.usecase.adapter.out
+package com.example.adapter.out
 
 import com.example.core.logger
 import com.example.usecase.port.out.AdvertiserNoticePort

@@ -1,10 +1,10 @@
-package com.example.usecase.adapter.out.mapper
+package com.example.adapter.out.mapper
 
 import com.example.core.logger
 import com.example.data.entity.Advertisement
 import com.example.core.advertisement.Advertisement as CoreAdvertisement
 
-class AdvertisementMapper {
+object AdvertisementMapper {
 
     private val logger = logger()
     fun toPersistence(advertisement: CoreAdvertisement): Advertisement {

@@ -4,9 +4,9 @@ import com.example.core.advertisement.Advertisement
 import com.example.core.advertisement.Description
 import com.example.core.advertisement.Image
 import com.example.core.advertisement.Title
-import com.example.usecase.adapter.out.MockAdvertisementInspectionPortAdapter
-import com.example.usecase.adapter.out.MockAdvertisementPersistencePortAdapter
-import com.example.usecase.adapter.out.MockAdvertiserNoticePortAdapter
+import com.example.adapter.out.MockAdvertisementInspectionPortAdapter
+import com.example.adapter.out.MockAdvertisementPersistencePortAdapter
+import com.example.adapter.out.MockAdvertiserNoticePortAdapter
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
