@@ -1,4 +1,4 @@
-package com.example.adapter.out.exception
+package com.example.adapter.exception
 
 import com.example.core.advertisement.AdvertisementId
 

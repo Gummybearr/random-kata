@@ -1,4 +1,4 @@
-package com.example.adapter.out.config
+package com.example.adapter.config
 
 import com.example.data.config.PersistenceConfig
 import com.example.data.repository.AdvertisementRepository
