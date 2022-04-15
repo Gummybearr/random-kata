@@ -1,4 +1,4 @@
-package com.example.usecase.exception
+package com.example.usecase.adapter.`in`.exception
 
 import com.example.core.advertisement.AdvertisementId
 

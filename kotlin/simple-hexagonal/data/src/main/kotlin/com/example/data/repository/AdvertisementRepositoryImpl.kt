@@ -1,5 +1,6 @@
 package com.example.data.repository
 
+import com.example.core.AdvertiserId
 import com.example.core.advertisement.AdvertisementId
 import com.example.data.entity.Advertisement
 import org.slf4j.Logger
@@ -16,6 +17,10 @@ class AdvertisementRepositoryImpl : AdvertisementRepository {
         return database[advertisementId]
     }
 
+    override fun findByAdvertiserId(advertiserId: AdvertiserId): List<Advertisement> {
+        return database.values.filter { it.advertiserId == advertiserId }
+    }
+
     override fun save(advertisement: Advertisement) {
         database[advertisement.id] = advertisement
         logger.info("데이터베이스에 ${advertisement}를 저장")
@@ -23,6 +28,6 @@ class AdvertisementRepositoryImpl : AdvertisementRepository {
 
     override fun delete(advertisementId: AdvertisementId) {
         database.remove(advertisementId)
-        logger.info("데이터베이스에서 광고(${advertisementId})를 제거")
+        logger.info("데이터베이스에서 광고($advertisementId)를 제거")
     }
 }
