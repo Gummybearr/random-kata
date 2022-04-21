@@ -1,15 +1,15 @@
 package com.example.webapp.config
 
-import com.example.usecase.port.`in`.CreateAdvertisementUsecase
-import com.example.usecase.port.`in`.DeleteAdvertisementUsecase
-import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
-import com.example.usecase.port.`in`.QueryAdvertisementUsecase
-import com.example.usecase.port.out.AdvertisementPersistencePort
-import com.example.usecase.port.out.AdvertiserNoticePort
-import com.example.usecase.service.CreateAdvertisement
-import com.example.usecase.service.DeleteAdvertisement
-import com.example.usecase.service.ModifyAdvertisement
-import com.example.usecase.service.QueryAdvertisement
+import com.example.application.port.`in`.CreateAdvertisementUsecase
+import com.example.application.port.`in`.DeleteAdvertisementUsecase
+import com.example.application.port.`in`.ModifyAdvertisementUsecase
+import com.example.application.port.`in`.QueryAdvertisementUsecase
+import com.example.application.port.out.AdvertisementPersistencePort
+import com.example.application.port.out.AdvertiserNoticePort
+import com.example.application.service.CreateAdvertisement
+import com.example.application.service.DeleteAdvertisement
+import com.example.application.service.ModifyAdvertisement
+import com.example.application.service.QueryAdvertisement
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

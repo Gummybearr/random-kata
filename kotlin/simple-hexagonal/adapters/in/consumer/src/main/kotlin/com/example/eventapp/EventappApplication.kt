@@ -1,18 +1,18 @@
-package com.example.webapp
+package com.example.eventapp
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication(
     scanBasePackages = [
-        "com.example.webapp",
-        "com.example.usecase",
+        "com.example.eventapp",
+        "com.example.application",
         "com.example.external",
         "com.example.persistence"
     ]
 )
-class WebappApplication
+class EventappApplication
 
 fun main(args: Array<String>) {
-    runApplication<WebappApplication>(*args)
+    runApplication<EventappApplication>(*args)
 }

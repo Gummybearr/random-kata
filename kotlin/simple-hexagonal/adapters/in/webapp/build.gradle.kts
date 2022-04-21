@@ -1,7 +1,7 @@
 dependencies {
     api(project(":application"))
-    api(project(":adapters:external"))
-    api(project(":adapters:persistence"))
+    api(project(":adapters:out:external"))
+    api(project(":adapters:out:persistence"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
