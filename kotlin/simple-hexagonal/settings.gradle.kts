@@ -2,7 +2,7 @@ rootProject.name = "demo"
 
 include("domain")
 
-include("usecase")
+include("application")
 include("adapter")
 
 include("webapp")

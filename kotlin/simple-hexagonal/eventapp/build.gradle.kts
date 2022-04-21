@@ -1,5 +1,5 @@
 dependencies {
-    api(project(":usecase"))
+    api(project(":application"))
     api(project(":adapter"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
