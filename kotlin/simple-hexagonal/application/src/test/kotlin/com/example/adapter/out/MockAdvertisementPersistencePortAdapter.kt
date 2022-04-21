@@ -2,7 +2,7 @@ package com.example.adapter.out
 
 import com.example.core.advertisement.Advertisement
 import com.example.core.advertisement.AdvertisementId
-import com.example.usecase.port.out.AdvertisementPersistencePort
+import com.example.application.port.out.AdvertisementPersistencePort
 
 class MockAdvertisementPersistencePortAdapter : AdvertisementPersistencePort {
 

@@ -1,6 +1,6 @@
 package com.example.adapter.out
 
-import com.example.usecase.port.out.AdvertiserNoticePort
+import com.example.application.port.out.AdvertiserNoticePort
 
 class MockAdvertiserNoticePortAdapter : AdvertiserNoticePort {
 

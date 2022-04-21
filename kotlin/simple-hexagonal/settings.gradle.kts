@@ -3,9 +3,9 @@ rootProject.name = "demo"
 include("domain")
 
 include("application")
-include("adapters")
 
-include("webapp")
-include("eventapp")
+include("adapters:in:webapp")
+include("adapters:in:consumer")
 
-include("data")
+include("adapters:out:external")
+include("adapters:out:persistence")

@@ -6,7 +6,7 @@ import org.springframework.boot.runApplication
 @SpringBootApplication(
     scanBasePackages = [
         "com.example.webapp",
-        "com.example.usecase",
+        "com.example.application",
         "com.example.external",
         "com.example.persistence"
     ]
