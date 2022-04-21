@@ -9,3 +9,5 @@ include("webapp")
 include("eventapp")
 
 include("data")
+
+include("adapter:external")
