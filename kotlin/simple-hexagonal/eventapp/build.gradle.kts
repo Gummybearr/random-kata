@@ -1,6 +1,6 @@
 dependencies {
     api(project(":application"))
-    api(project(":adapter"))
+    api(project(":adapters"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

@@ -3,7 +3,7 @@ rootProject.name = "demo"
 include("domain")
 
 include("application")
-include("adapter")
+include("adapters")
 
 include("webapp")
 include("eventapp")
