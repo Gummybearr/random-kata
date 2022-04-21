@@ -1,5 +1,5 @@
 dependencies {
-    api(project(":core"))
+    api(project(":domain"))
     api(project(":data"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")

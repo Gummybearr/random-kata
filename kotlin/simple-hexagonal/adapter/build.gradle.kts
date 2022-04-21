@@ -1,5 +1,5 @@
 dependencies {
-    api(project(":core"))
+    api(project(":domain"))
     api(project(":usecase"))
     api(project(":data"))
 

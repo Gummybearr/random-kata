@@ -1,6 +1,6 @@
 rootProject.name = "demo"
 
-include("core")
+include("domain")
 
 include("usecase")
 include("adapter")
