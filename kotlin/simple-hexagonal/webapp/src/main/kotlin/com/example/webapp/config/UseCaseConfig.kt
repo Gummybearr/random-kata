@@ -1,9 +1,9 @@
 package com.example.webapp.config
 
-import com.example.usecase.adapter.`in`.CreateAdvertisement
-import com.example.usecase.adapter.`in`.DeleteAdvertisement
-import com.example.usecase.adapter.`in`.ModifyAdvertisement
-import com.example.usecase.adapter.`in`.QueryAdvertisement
+import com.example.usecase.service.CreateAdvertisement
+import com.example.usecase.service.DeleteAdvertisement
+import com.example.usecase.service.ModifyAdvertisement
+import com.example.usecase.service.QueryAdvertisement
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
 import com.example.usecase.port.`in`.DeleteAdvertisementUsecase
 import com.example.usecase.port.`in`.ModifyAdvertisementUsecase

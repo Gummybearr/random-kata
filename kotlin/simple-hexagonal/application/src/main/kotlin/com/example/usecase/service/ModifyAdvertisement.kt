@@ -1,7 +1,7 @@
-package com.example.usecase.adapter.`in`
+package com.example.usecase.service
 
 import com.example.core.logger
-import com.example.usecase.adapter.`in`.exception.AdvertisementNotFoundException
+import com.example.usecase.service.exception.AdvertisementNotFoundException
 import com.example.usecase.port.`in`.ModifyAdvertisementUsecase
 import com.example.usecase.port.out.AdvertisementPersistencePort
 import com.example.usecase.port.out.AdvertiserNoticePort

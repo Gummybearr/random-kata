@@ -8,6 +8,7 @@ import com.example.adapter.out.MockAdvertisementPersistencePortAdapter
 import com.example.adapter.out.MockAdvertiserNoticePortAdapter
 import com.example.core.AdvertiserId
 import com.example.usecase.port.`in`.CreateAdvertisementUsecase
+import com.example.usecase.service.CreateAdvertisement
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 

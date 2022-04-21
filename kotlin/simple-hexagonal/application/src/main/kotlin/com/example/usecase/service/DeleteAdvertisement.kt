@@ -1,4 +1,4 @@
-package com.example.usecase.adapter.`in`
+package com.example.usecase.service
 
 import com.example.core.logger
 import com.example.usecase.port.`in`.DeleteAdvertisementUsecase
