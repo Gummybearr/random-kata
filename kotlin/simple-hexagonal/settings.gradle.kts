@@ -1,11 +1,11 @@
 rootProject.name = "demo"
 
-include("domain")
+include("core")
 
-include("application")
+include("usecase")
+include("adapter")
 
-include("adapters:in:webapp")
-include("adapters:in:eventapp")
+include("webapp")
+include("eventapp")
 
-include("adapters:out:external")
-include("adapters:out:persistence")
+include("data")
