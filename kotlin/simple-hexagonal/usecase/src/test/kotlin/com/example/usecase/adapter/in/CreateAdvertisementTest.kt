@@ -40,7 +40,7 @@ internal class CreateAdvertisementTest {
     }
 
     private fun `광고 생성`() {
-        val advertisement = Advertisement.new(
+        val advertisement = Advertisement(
             title = Title("asasdfasdf"),
             image = Image("address in s3 bucket"),
             description = Description("asdfasdfasdlkfjhasldkfjh"),
