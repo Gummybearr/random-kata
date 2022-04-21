@@ -2,7 +2,6 @@ package com.example.usecase.port.`in`
 
 import com.example.core.advertisement.Advertisement
 import com.example.core.advertisement.AdvertisementId
-import com.example.core.advertisement.AdvertisementPerformance
 
 interface QueryAdvertisementUsecase {
     fun query(query: Query): Result?
@@ -12,7 +11,6 @@ interface QueryAdvertisementUsecase {
     )
 
     data class Result(
-        val advertisement: Advertisement,
-        val performance: AdvertisementPerformance?
+        val advertisement: Advertisement
     )
 }

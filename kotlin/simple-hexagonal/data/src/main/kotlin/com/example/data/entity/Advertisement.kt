@@ -10,10 +10,9 @@ class Advertisement(
     val advertiserId: AdvertiserId,
     val title: Title,
     val image: Image,
-    val description: Description,
-    val status: AdvertisementStatus
+    val description: Description
 ) {
     override fun toString(): String {
-        return "Advertisement(id=$id, advertiserId=$advertiserId, title=$title, image=$image, description=$description, status=$status)"
+        return "Advertisement(id=$id, advertiserId=$advertiserId, title=$title, image=$image, description=$description)"
     }
 }

@@ -4,7 +4,6 @@ import com.example.core.advertisement.Advertisement
 import com.example.core.advertisement.Description
 import com.example.core.advertisement.Image
 import com.example.core.advertisement.Title
-import com.example.adapter.out.MockAdvertisementInspectionPortAdapter
 import com.example.adapter.out.MockAdvertisementPersistencePortAdapter
 import com.example.adapter.out.MockAdvertiserNoticePortAdapter
 import com.example.core.AdvertiserId
@@ -14,16 +13,14 @@ import org.junit.jupiter.api.Test
 
 internal class CreateAdvertisementTest {
 
-    private val advertisementInspectionPort = MockAdvertisementInspectionPortAdapter()
     private val advertisementPersistencePort = MockAdvertisementPersistencePortAdapter()
     private val advertiserNoticePort = MockAdvertiserNoticePortAdapter()
 
     private val createAdvertisement =
-        CreateAdvertisement(advertisementInspectionPort, advertisementPersistencePort, advertiserNoticePort)
+        CreateAdvertisement(advertisementPersistencePort, advertiserNoticePort)
 
     @AfterEach
     fun reset() {
-        advertisementInspectionPort.clear()
         advertisementPersistencePort.clear()
         advertiserNoticePort.clear()
     }

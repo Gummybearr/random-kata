@@ -14,8 +14,7 @@ object AdvertisementMapper {
             advertiserId = advertisement.advertiserId,
             title = advertisement.title,
             image = advertisement.image,
-            description = advertisement.description,
-            status = advertisement.status
+            description = advertisement.description
         )
     }
 
@@ -26,8 +25,7 @@ object AdvertisementMapper {
             advertiserId = advertisement.advertiserId,
             title = advertisement.title,
             image = advertisement.image,
-            description = advertisement.description,
-            status = advertisement.status
+            description = advertisement.description
         )
     }
 }
