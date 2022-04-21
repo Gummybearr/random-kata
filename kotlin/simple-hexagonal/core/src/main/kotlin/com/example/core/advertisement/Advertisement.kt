@@ -10,18 +10,12 @@ class Advertisement(
     val description: Description,
     val status: AdvertisementStatus
 ) {
-    companion object {
-        fun new(advertiserId: AdvertiserId, title: Title, image: Image, description: Description): Advertisement {
-            return Advertisement(
-                id = AdvertisementId.new(),
-                advertiserId = advertiserId,
-                title = title,
-                image = image,
-                description = description,
-                status = AdvertisementStatus.PENDING
-            )
-        }
-    }
+    constructor(
+        advertiserId: AdvertiserId,
+        title: Title,
+        image: Image,
+        description: Description
+    ) : this(AdvertisementId(), advertiserId, title, image, description, AdvertisementStatus.PENDING)
 
     fun update(newTitle: Title?, newImage: Image?, newDescription: Description?): Advertisement {
         val title = newTitle ?: title

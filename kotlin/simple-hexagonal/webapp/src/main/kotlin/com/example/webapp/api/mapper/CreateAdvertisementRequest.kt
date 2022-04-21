@@ -26,6 +26,6 @@ data class CreateAdvertisementRequest(
         val title = Title(title = title)
         val image = Image(url = image)
         val description = Description(description = description)
-        return Advertisement.new(advertiserId = AdvertiserId(advertiserId), title = title, image = image, description = description)
+        return Advertisement(advertiserId = AdvertiserId(advertiserId), title = title, image = image, description = description)
     }
 }
