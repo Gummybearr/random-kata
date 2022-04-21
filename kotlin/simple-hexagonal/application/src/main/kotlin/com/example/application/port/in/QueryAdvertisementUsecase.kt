@@ -1,7 +1,7 @@
 package com.example.application.port.`in`
 
-import com.example.core.advertisement.Advertisement
-import com.example.core.advertisement.AdvertisementId
+import com.example.domain.advertisement.Advertisement
+import com.example.domain.advertisement.AdvertisementId
 
 interface QueryAdvertisementUsecase {
     fun query(query: Query): Result?

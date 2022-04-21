@@ -1,7 +1,7 @@
 package com.example.webapp.api.mapper
 
-import com.example.core.advertisement.Advertisement
-import com.example.core.logger
+import com.example.domain.advertisement.Advertisement
+import com.example.domain.logger
 
 data class QueryAdvertisementResponse(
     val advertisementId: Long,

@@ -1,7 +1,7 @@
 package com.example.application.port.out
 
-import com.example.core.advertisement.Advertisement
-import com.example.core.advertisement.AdvertisementId
+import com.example.domain.advertisement.Advertisement
+import com.example.domain.advertisement.AdvertisementId
 
 interface AdvertisementPersistencePort {
     fun find(advertisementId: AdvertisementId): Advertisement?

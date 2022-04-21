@@ -1,6 +1,6 @@
 package com.example.eventapp.consumer
 
-import com.example.core.logger
+import com.example.domain.logger
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 

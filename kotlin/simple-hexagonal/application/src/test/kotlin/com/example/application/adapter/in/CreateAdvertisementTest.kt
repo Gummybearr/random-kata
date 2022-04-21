@@ -1,12 +1,12 @@
 package com.example.application.adapter.`in`
 
-import com.example.core.advertisement.Advertisement
-import com.example.core.advertisement.Description
-import com.example.core.advertisement.Image
-import com.example.core.advertisement.Title
+import com.example.domain.advertisement.Advertisement
+import com.example.domain.advertisement.Description
+import com.example.domain.advertisement.Image
+import com.example.domain.advertisement.Title
 import com.example.adapter.out.MockAdvertisementPersistencePortAdapter
 import com.example.adapter.out.MockAdvertiserNoticePortAdapter
-import com.example.core.AdvertiserId
+import com.example.domain.AdvertiserId
 import com.example.application.port.`in`.CreateAdvertisementUsecase
 import com.example.application.service.CreateAdvertisement
 import org.junit.jupiter.api.AfterEach

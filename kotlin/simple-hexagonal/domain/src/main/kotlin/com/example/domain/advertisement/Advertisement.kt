@@ -1,6 +1,6 @@
-package com.example.core.advertisement
+package com.example.domain.advertisement
 
-import com.example.core.AdvertiserId
+import com.example.domain.AdvertiserId
 
 class Advertisement(
     val id: AdvertisementId,

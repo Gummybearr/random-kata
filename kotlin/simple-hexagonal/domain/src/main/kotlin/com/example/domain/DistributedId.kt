@@ -1,4 +1,4 @@
-package com.example.core
+package com.example.domain
 
 import net.jcip.annotations.GuardedBy
 

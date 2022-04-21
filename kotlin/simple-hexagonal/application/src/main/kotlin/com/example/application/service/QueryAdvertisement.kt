@@ -1,6 +1,6 @@
 package com.example.application.service
 
-import com.example.core.logger
+import com.example.domain.logger
 import com.example.application.port.`in`.QueryAdvertisementUsecase
 import com.example.application.port.out.AdvertisementPersistencePort
 

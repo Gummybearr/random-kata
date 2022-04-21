@@ -1,6 +1,6 @@
-package com.example.core.advertisement
+package com.example.domain.advertisement
 
-import com.example.core.exception.CustomException
+import com.example.domain.exception.CustomException
 
 data class Image(val url: String) {
 

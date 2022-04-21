@@ -1,11 +1,11 @@
 package com.example.webapp.api.mapper
 
-import com.example.core.AdvertiserId
-import com.example.core.advertisement.Advertisement
-import com.example.core.advertisement.Description
-import com.example.core.advertisement.Image
-import com.example.core.advertisement.Title
-import com.example.core.logger
+import com.example.domain.AdvertiserId
+import com.example.domain.advertisement.Advertisement
+import com.example.domain.advertisement.Description
+import com.example.domain.advertisement.Image
+import com.example.domain.advertisement.Title
+import com.example.domain.logger
 import com.example.application.port.`in`.CreateAdvertisementUsecase
 
 data class CreateAdvertisementRequest(

@@ -1,7 +1,7 @@
 package com.example.webapp.api
 
-import com.example.core.advertisement.AdvertisementId
-import com.example.core.logger
+import com.example.domain.advertisement.AdvertisementId
+import com.example.domain.logger
 import com.example.application.port.`in`.CreateAdvertisementUsecase
 import com.example.application.port.`in`.DeleteAdvertisementUsecase
 import com.example.application.port.`in`.ModifyAdvertisementUsecase

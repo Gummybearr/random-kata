@@ -1,9 +1,9 @@
 package com.example.application.port.`in`
 
-import com.example.core.advertisement.AdvertisementId
-import com.example.core.advertisement.Description
-import com.example.core.advertisement.Image
-import com.example.core.advertisement.Title
+import com.example.domain.advertisement.AdvertisementId
+import com.example.domain.advertisement.Description
+import com.example.domain.advertisement.Image
+import com.example.domain.advertisement.Title
 
 interface ModifyAdvertisementUsecase {
     fun command(command: Command)

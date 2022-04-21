@@ -1,6 +1,6 @@
-package com.example.core.advertisement
+package com.example.domain.advertisement
 
-import com.example.core.DistributedId
+import com.example.domain.DistributedId
 
 data class AdvertisementId(val id: Long) {
     constructor() : this(DistributedId.nextId())
