@@ -3,10 +3,10 @@ from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
 from agents.linkedin_lookup_agent import linkedin_lookup_agent
-from output_parsers import summary_parser
+from output_parsers import summary_parser, Summary
 from third_parties.linkedin import scrape_linkedin_profile
 
-def ice_break_with(name: str) -> str:
+def ice_break_with(name: str) -> Summary:
     linkedin_username = linkedin_lookup_agent(name=name)
     linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_username)
 
@@ -32,6 +32,8 @@ def ice_break_with(name: str) -> str:
     res = chain.invoke(input={"information": linkedin_data})
 
     print(res)
+
+    return res
 
 
 if __name__ == "__main__":
