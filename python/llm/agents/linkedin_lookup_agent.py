@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 
 from tools.tools import get_profile_url_tavily
 
-def lookup(name: str) -> str:
+def linkedin_lookup_agent(name: str) -> str:
     llm = ChatOpenAI(
         temperature=0,
         model_name="gpt-4o-mini",
@@ -40,7 +40,7 @@ def lookup(name: str) -> str:
     linkedin_profile_url = result["output"]
     return linkedin_profile_url
 
-if __name__ == "__main__":
-    load_dotenv()
-    linkedin_url = lookup(name="Eden Marco")
-    print(linkedin_url)
+# if __name__ == "__main__":
+#     load_dotenv()
+#     linkedin_url = lookup(name="Eden Marco")
+#     print(linkedin_url)
