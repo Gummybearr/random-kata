@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>The Book of Kells</name>
+      <Point><coordinates>-6.2555,53.3438,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+      <name>Las Vegas</name>
+      <Point><coordinates>-115.1398,36.1699,0</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>
